@@ -1,0 +1,93 @@
+// Standard horizontal list
+.horizontal {list-style:none; margin:0; padding:0;
+	li {.left();}
+}
+
+// Standard list without default browser styling
+.clean {list-style:none; margin:0; padding:0;}
+
+// The Magnificent Clearfix
+.clearfix {
+	&:before,
+	&:after {content:"\0020"; display:block; height:0; overflow:hidden;}
+	&:after {clear:both;}
+	.lt-ie9 & {zoom:1;}
+}
+
+// Non-semantic helper classes
+.first {margin-left:0;}
+.last {margin-right:0;}
+.top {margin-top:0;}
+.bottom {margin-bottom:0;}
+.inline {display:inline;}
+.center {margin:0 auto;}
+.borderless {border:0;}
+
+.clear {clear:both;}
+.floatLeft {float:left;}
+.floatRight {float:right;}
+.imgLeft {float:left; margin:4px 10px 4px 0;}
+.imgRight {float:right; margin:4px 0 4px 10px;}
+
+.strong {font-weight:bold;}
+.emphasis {font-style:italic;}
+.underline {border-bottom:1px solid;}
+
+.hide {display:none;}
+.opaque {opacity:0;}
+.noBg {background:none;}
+.noMargin {margin:0 !important;}
+.noPadding {padding:0 !important;}
+.noIndent {margin-left:0; padding-left:0;}
+.noBullet {list-style:none; list-style-image:none;}
+
+// No () cause we wan't to apply this style as class too */
+.uc {text-transform:uppercase;}
+.lc {text-transform:lowercase;}
+
+.left() {position:relative; float:left;}
+.right() {position:relative; float:right;}
+
+.rel() {position:relative;}
+.abs() {position:absolute;}
+.abs(@top, @left) {position:absolute; top:@top; left:@left;}
+
+// Center-align a block level element
+.center-block {display: block; margin: 0 auto;}
+
+// Sizing shortcuts
+.size(@height: 5px, @width: 5px) {height: @height; width: @width; }
+.square(@size: 5px) {.size(@size, @size);}
+
+//  IE7 inline-block
+.ie7-inline-block() { *display: inline; *zoom: 1;}
+
+// Image Replacement
+.hide-text {font: 0/0 a; color: transparent; text-shadow: none;	background-color: transparent; border: 0;}
+
+/******* CSS 3 HELPERS *******/
+
+// Rounded corners, created some aliasses so corners can be set with or without comma's
+.rounded(@radius:3px) {	border-radius:@radius; -moz-background-clip:padding; -webkit-background-clip:padding-box; background-clip:padding-box;}
+.rounded(@vertical, @horizontal) {.rounded(@arguments);}
+.rounded(@top, @horizontal, @bottom) {.rounded(@arguments);}
+.rounded(@top, @right, @bottom, @left) {.rounded(@arguments);}
+
+// Box shadow
+.box-shadow(@shadow:0 1px 3px rgba(0,0,0,.25)) {-webkit-box-shadow: @shadow; box-shadow:@shadow;}
+
+// Opacity
+.opacity(@op:1) {opacity:@op; 
+	.lt-ie9 & {filter:e(%("alpha(opacity=%d)", percentage(@op)));}
+}
+
+.text-shadow(@hoff:1px, @voff:1px, @blur:1px, @color:fade(@headingColor, 75)) {	text-shadow:@hoff @voff @blur @color;}
+
+// Vertical gradient (from top to bottom)
+.gradient(@from:#fff, @to:#f00) {
+	background-color:@to;
+	background-repeat:repeat-x;
+	background-image:-moz-linear-gradient(@from, @to); background-image:-ms-linear-gradient(@from, @to); background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, @from), color-stop(100%, @to)); background-image:-webkit-linear-gradient(@from, @to); background-image:-o-linear-gradient(@from, @to); background-image:linear-gradient(@from, @to);
+	.lt-ie10 & {-ms-filter:%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @from, @to); }
+	.lt-ie8 & {	filter:e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @from, @to)); }
+}
