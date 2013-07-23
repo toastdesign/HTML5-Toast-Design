@@ -17,3 +17,5 @@ xcuserdata
 # svn & cvs
 .svn
 CVS
+
+*.png
