@@ -1,20 +1,5 @@
-// Standard horizontal list
-.horizontal {list-style:none; margin:0; padding:0;
-	li {.left();}
-}
+/******* CSS 3 HELPERS *******/
 
-// Standard list without default browser styling
-.clean {list-style:none; margin:0; padding:0;}
-
-// The Magnificent Clearfix
-.clearfix {
-	&:before,
-	&:after {content:"\0020"; display:block; height:0; overflow:hidden;}
-	&:after {clear:both;}
-	.lt-ie9 & {zoom:1;}
-}
-
-// Non-semantic helper classes
 .first {margin-left:0;}
 .last {margin-right:0;}
 .top {margin-top:0;}
@@ -51,6 +36,7 @@
 .rel() {position:relative;}
 .abs() {position:absolute;}
 .abs(@top, @left) {position:absolute; top:@top; left:@left;}
+.bb {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
 
 // Center-align a block level element
 .center-block {display: block; margin: 0 auto;}
@@ -64,6 +50,14 @@
 
 // Image Replacement
 .hide-text {font: 0/0 a; color: transparent; text-shadow: none;	background-color: transparent; border: 0;}
+
+// Standard horizontal list
+.horizontal {list-style:none; margin:0; padding:0;
+	li {.left();}
+}
+
+// Standard list without default browser styling
+.clean {list-style:none; margin:0; padding:0;}
 
 /******* CSS 3 HELPERS *******/
 
