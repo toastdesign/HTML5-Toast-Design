@@ -82,12 +82,3 @@
 }
 
 .text-shadow(@hoff:1px, @voff:1px, @blur:1px, @color:fade(@headingColor, 75)) {	text-shadow:@hoff @voff @blur @color;}
-
-// Vertical gradient (from top to bottom)
-.gradient(@from:#fff, @to:#f00) {
-	background-color:@to;
-	background-repeat:repeat-x;
-	background-image:-moz-linear-gradient(@from, @to); background-image:-ms-linear-gradient(@from, @to); background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, @from), color-stop(100%, @to)); background-image:-webkit-linear-gradient(@from, @to); background-image:-o-linear-gradient(@from, @to); background-image:linear-gradient(@from, @to);
-	.lt-ie10 & {-ms-filter:%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @from, @to); }
-	.lt-ie8 & {	filter:e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @from, @to)); }
-}
