@@ -1,3 +1,4 @@
+h1{font-family:'lobster';}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}
 audio,canvas,video{display:inline-block;}
 audio:not([controls]){display:none;height:0;}
@@ -65,6 +66,7 @@ table{border-collapse:collapse;border-spacing:0;}
 .hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
 .horizontal{list-style:none;margin:0;padding:0;}.horizontal li{position:relative;float:left;}
 .clean{list-style:none;margin:0;padding:0;}
+@font-face{font-family:'lobster';src:url('../css/fonts/lobster/lobster_1.3-webfont.eot');src:url('../css/fonts/lobster/lobster_1.3-webfont.eot?#iefix') format('embedded-opentype'),url('../css/fonts/lobster/lobster_1.3-webfont.woff') format('woff'),url('../css/fonts/lobster/lobster_1.3-webfont.ttf') format('truetype'),url('../css/fonts/lobster/lobster_1.3-webfont.svg#lobster_1.3regular') format('svg');font-weight:normal;font-style:normal;}.lobster{font-family:'lobster';}
 .container{position:relative;width:960px;margin:0 auto;padding:0;}.container .column,.container .columns{float:left;display:inline;margin-left:10px;margin-right:10px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}.container .column.alpha,.container .columns.alpha{margin-left:0;}
 .container .column.omega,.container .columns.omega{margin-right:0;}
 .container .one.column,.container .one.columns{width:40px;}
@@ -106,4 +108,4 @@ table{border-collapse:collapse;border-spacing:0;}
 .row:after,.clearfix:after{clear:both;}
 .row,.clearfix{zoom:1;}
 .clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}
-div{border:1px solid #999;padding:10px;}
+div{border:1px solid #999;padding:10px;font-family:'lobster';}
