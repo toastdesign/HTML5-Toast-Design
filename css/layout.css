@@ -108,4 +108,6 @@ table{border-collapse:collapse;border-spacing:0;}
 .row:after,.clearfix:after{clear:both;}
 .row,.clearfix{zoom:1;}
 .clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}
-div{border:1px solid #999;padding:10px;font-family:'lobster';}
+.spriteMainChange{display:inline-block;*display:inline;*zoom:1;background-image:url(../images/sprites/main.png?b90a6b);background-repeat:no-repeat;}
+.spriteMainChange{background-position:0px 0px;width:21px;height:18px;}
+div{border:1px solid #999;padding:10px;font-family:'lobster';display:inline-block;*display:inline;*zoom:1;background-image:url(../images/sprites/main.png?b90a6b);background-repeat:no-repeat;background-position:0px 0px;width:21px;height:18px;}
