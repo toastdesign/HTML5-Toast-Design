@@ -1,5 +1,6 @@
 /******* CSS 3 HELPERS *******/
 
+// No () cause we wan't to apply this style as class too */
 .first {margin-left:0;}
 .last {margin-right:0;}
 .top {margin-top:0;}
@@ -26,7 +27,6 @@
 .noIndent {margin-left:0; padding-left:0;}
 .noBullet {list-style:none; list-style-image:none;}
 
-// No () cause we wan't to apply this style as class too */
 .uc {text-transform:uppercase;}
 .lc {text-transform:lowercase;}
 
@@ -35,8 +35,10 @@
 
 .rel() {position:relative;}
 .abs() {position:absolute;}
-.fix {position:fixed;}
-.bb {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.fix() {position:fixed;}
+.bb() {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.block() {display:block;}
+.inline-block() {display:inline-block;}
 
 // Center-align a block level element
 .center-block {display: block; margin: 0 auto;}
@@ -68,7 +70,7 @@
 .rounded(@top, @right, @bottom, @left) {.rounded(@arguments);}
 
 // Transitions
-.transition(@transition) {
+.transition(@transition:0.5s) {
   -webkit-transition: @transition;
      -moz-transition: @transition;
        -o-transition: @transition;

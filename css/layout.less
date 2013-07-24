@@ -11,3 +11,7 @@
 /*********** main styles ***********/ 
 body {background:@bodyBackground; font-family: @baseFontFamily; font-size:@baseFontSize;}
 div {border:1px solid @gray;}
+
+nav a{.block(); padding:10px; background:@yellow;
+	&:hover {background:@blue; .transition();}
+}
