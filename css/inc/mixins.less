@@ -35,7 +35,7 @@
 
 .rel() {position:relative;}
 .abs() {position:absolute;}
-.abs(@top, @left) {position:absolute; top:@top; left:@left;}
+.fix {position:fixed;}
 .bb {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
 
 // Center-align a block level element
@@ -67,8 +67,20 @@
 .rounded(@top, @horizontal, @bottom) {.rounded(@arguments);}
 .rounded(@top, @right, @bottom, @left) {.rounded(@arguments);}
 
-// Box shadow
-.box-shadow(@shadow:0 1px 3px rgba(0,0,0,.25)) {-webkit-box-shadow: @shadow; box-shadow:@shadow;}
+// Transitions
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+
+// Drop shadows
+.box-shadow(@shadow:0 1px 3px rgba(0,0,0,.25)) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
 
 // Opacity
 .opacity(@op:1) {opacity:@op; 

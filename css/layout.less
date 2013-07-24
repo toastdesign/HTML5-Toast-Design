@@ -1,9 +1,13 @@
+/*********** Import all less files ***********/ 
 @import "inc/variables.less";
 @import "inc/normalize.less";
 @import "inc/mixins.less";
 @import "inc/fonts.less";
+@import "inc/buttons.less";
 @import "inc/grid.less";
 // If using sprites 
 @import "inc/sprites/main.less";
 
-div {border:1px solid #999; padding:10px; .lobster(); .spriteMain2-en-een-half-Stars();}
+/*********** main styles ***********/ 
+body {background:@bodyBackground; font-family: @baseFontFamily; font-size:@baseFontSize;}
+div {border:1px solid @gray;}
